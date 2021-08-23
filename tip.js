@@ -1,0 +1,1 @@
+console.log('This NPM package created by @Rayyanx95');

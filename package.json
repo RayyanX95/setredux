@@ -1,0 +1,20 @@
+{
+  "name": "setdux",
+  "version": "1.0.0",
+  "description": "set up redux store files with one command",
+  "main": "index.js",
+  "bin": {
+    "setdux": "./index.js"
+  },
+  "keywords": [
+    "javascript",
+    "node",
+    "react",
+    "redux",
+    "react-redux",
+    "jsx",
+    "fs"
+  ],
+  "author": "Ibrahim AlRayyan",
+  "license": "MIT"
+}

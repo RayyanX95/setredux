@@ -1,10 +1,10 @@
 {
-  "name": "setdux",
+  "name": "setredux",
   "version": "1.0.0",
   "description": "set up redux store files with one command",
   "main": "index.js",
   "bin": {
-    "setdux": "./index.js"
+    "setredux": "./index.js"
   },
   "keywords": [
     "javascript",

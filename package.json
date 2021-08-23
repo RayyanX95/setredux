@@ -4,7 +4,7 @@
   "description": "set up redux store files with one command",
   "main": "index.js",
   "bin": {
-    "setredux": "./index.js"
+    "setredux": "./src/index.js"
   },
   "keywords": [
     "javascript",

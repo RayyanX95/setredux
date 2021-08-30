@@ -3,6 +3,19 @@ import { createStore } from 'redux';\n\
 import rootReducer from './reducers';\n\n\
 export default createStore(rootReducer);";
 
+const configStorFileContentThunk = "\
+import thunk from 'redux-thunk';\n\
+import createDebounce from 'redux-debounced';\n\
+import { createStore, applyMiddleware, compose } from 'redux';\n\n\
+import rootReducer from './reducers/index.js';\n\n\
+//*  create middleware\n\
+const middleware = [thunk, createDebounce()];\n\n\
+//* Debug & Dev Tools\n\
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;\n\n\
+//* Create store\n\
+const store = createStore(rootReducer, {}, composeEnhancers(applyMiddleware(...middleware)));\n\n\
+export { store };"
+
 const reducersIndexFileContent = "\
 import { combineReducers } from 'redux';\n\
 // import counterReducers from 'counter.reducer';\n\n\
@@ -35,6 +48,7 @@ ReactDOM.render(app, document.getElementById('root'));\n\n\
 serviceWorker.unregister();";
 
 exports.configStore = configStorFileContent;
+exports.configStoreThunk = configStorFileContentThunk;
 exports.reducersIndex = reducersIndexFileContent;
 exports.actionsIndex = actionsIndexFileContent;
 exports.reactIndexJS = reactIndexJSFileContent;

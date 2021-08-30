@@ -13,7 +13,7 @@ console.log('creating configStore.js file...');
 const storeDir = "store"
 !fs.existsSync(storeDir) && fs.mkdirSync(storeDir);
 //* create configStore.js file
-fs.writeFileSync('store/configStor.js', content.configStore);
+fs.writeFileSync('store/configStore.js', content.configStore);
 
 //* create stor/reducers dir if it doesn't exist'
 console.log('creating reducers/index.js file...');

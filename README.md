@@ -104,3 +104,25 @@ serviceWorker.unregister();
 **_Just an additional option to the command_** 🙂
 
 `--thunk`
+
+You can use this option to add `redux-thunk` setup to your project automatically.
+
+So if you used it ,`configStore.js` file will have the following content:
+``` js
+import thunk from 'redux-thunk';
+import createDebounce from 'redux-debounced';
+import { createStore, applyMiddleware, compose } from 'redux';
+
+import rootReducer from './reducers/index.js';
+
+//*  create middleware
+const middleware = [thunk, createDebounce()];
+
+//* Debug & Dev Tools
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+//* Create store
+const store = createStore(rootReducer, {}, composeEnhancers(applyMiddleware(...middleware)));
+
+export { store };
+```

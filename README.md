@@ -126,3 +126,14 @@ const store = createStore(rootReducer, {}, composeEnhancers(applyMiddleware(...m
 
 export { store };
 ```
+
+`--version` or `-v`
+
+If you want to know the version of the package, run:
+``` shell
+setredux --version
+```
+Or you can just use `-v`:
+```
+setredux -v
+```

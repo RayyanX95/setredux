@@ -141,3 +141,10 @@ Or you can just use `-v`:
 ```
 setredux -v
 ```
+## The Final Command
+
+You can use the following command to setup everything to you automatically:
+
+```
+setredux init --connect --thunk
+```

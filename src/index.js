@@ -8,6 +8,9 @@ const content = require('./files-content');
 const storeDir = "store";
 
 if (!process.argv.includes('init')) {
+  const packageFile = fs.readFileSync('./package.json', 'utf8');
+  const { version } = JSON.parse(packageFile);
+  console.log(version);
   console.log("try: setredux init");
   exit(0);
 }

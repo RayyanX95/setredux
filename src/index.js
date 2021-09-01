@@ -1,10 +1,18 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
+const { exit } = require('process');
 
 const content = require('./files-content');
 
-const storeDir = "store"
+const storeDir = "store";
+
+if (!process.argv.includes('init')) {
+  console.log("try: setredux init");
+  exit(0);
+}
+
+exit(0);
 
 //* create store dir if it doesn't exist';
 createStoreDir();
@@ -53,6 +61,6 @@ function connectStoreToReact() {
   const srcDir = "src";
   if (fs.existsSync(srcDir) && process.argv.includes('--connect')) {
     console.log('connecting redux with React index.js file...');
-    // fs.writeFileSync('src/index.js', content.reactIndexJS);
+    fs.writeFileSync('src/index.js', content.reactIndexJS);
   };
 };

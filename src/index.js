@@ -22,8 +22,6 @@ if (!process.argv.includes('init')) {
   exit(0);
 };
 
-exit(0);
-
 //* create store dir if it doesn't exist';
 createStoreDir();
 

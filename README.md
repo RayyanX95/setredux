@@ -106,9 +106,8 @@ serviceWorker.unregister();
 
 `--thunk`
 
-You can use this option to add `redux-thunk` setup to your project automatically.
+This option adds `redux-thunk` setup to your project automatically. and the `configStore.js` file will have the following content:
 
-So if you used it ,`configStore.js` file will have the following content:
 ``` js
 import thunk from 'redux-thunk';
 import createDebounce from 'redux-debounced';
@@ -134,13 +133,14 @@ If you want to know the version of the package, run:
 ``` shell
 setredux --version
 ```
-Or you can just use `-v`:
+Or you can use just `-v`:
 ```
 setredux -v
 ```
 ## The Final Command
 
-You can use the following command to setup everything you need automatically:
+The following command will setup everything you need automatically:
+
 * Setup store files
 * Add `redux-thunk`configuration to `configStore.js` file
 * Connect redux **store** to React
@@ -148,3 +148,5 @@ You can use the following command to setup everything you need automatically:
 ```
 setredux init --connect --thunk
 ```
+
+> ⚠ Notice that you should install the **redux** packages in yourself, such as `redux`, `react-redux`, `redux-thunk`, and `redux-debounced`.

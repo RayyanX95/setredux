@@ -143,7 +143,10 @@ setredux -v
 ```
 ## The Final Command
 
-You can use the following command to setup everything to you automatically:
+You can use the following command to setup everything you need automatically:
+* Setup store files
+* Add `redux-thunk`configuration to `configStore.js` file
+* Connect redux **store** to React
 
 ```
 setredux init --connect --thunk

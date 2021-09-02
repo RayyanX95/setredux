@@ -6,7 +6,7 @@ A single command to setup **redux** store files and connect it to React
 
 ## Installation
 
-You can install the locally:
+Install the package locally:
 
 ```shell
 npm install --save-dev setredux
@@ -20,9 +20,9 @@ npm install -g setredux
 
 ## Usage
 
-Once you installed the package as mentioned before you can use it in your project.
+Once it is installed as mentioned before you can use it in your project.
 
-So on the root directory of your React App try run the following command:
+So on the root directory of React App try to run the following command:
 
 ```
 setredux init
@@ -32,13 +32,12 @@ This command will output the following files in this certain structure.
 
 ## Output
 
-The command outputs store in the following structure:
+The command outputs the **store files** in the following structure:
 
 ![](./assets/files-structure.png)
 
 ## Files Content
-Every file will have a snippet as boilerplate.
-
+Every file will have an initial boilerplate as following:
 
 `configStore.js`
 
@@ -104,8 +103,6 @@ ReactDOM.render(app, document.getElementById('root'));
 
 serviceWorker.unregister();
 ```
-
-**_Just an additional option to the command_** 🙂
 
 `--thunk`
 
